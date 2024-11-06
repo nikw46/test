@@ -1,0 +1,103 @@
+/* 頁面基本設定 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/background.jpg');  /* 背景圖片 */
+    background-size: cover; /* 讓背景圖片覆蓋整個頁面 */
+    background-position: center center; /* 背景居中 */
+    background-attachment: fixed; /* 固定背景不隨滾動 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;  /* 主體文字顏色為深灰色 */
+}
+
+/* 容器樣式 */
+.container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);  /* 背景透明白色，讓背景圖片可見 */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);  /* 增加柔和陰影效果 */
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease-in; /* 漸顯動畫 */
+}
+
+/* 按鈕樣式 */
+.button {
+    background-color: #CF7F9F;  /* 柔和粉紅色 */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px 0;
+    display: inline-block;
+    width: 80%; /* 讓按鈕填滿容器的寬度 */
+}
+.option-button {
+    background-color: #CF7F9F;  /* 柔和粉紅色 */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px 0;
+    display: inline-block;
+    width: 80%; /* 讓按鈕填滿容器的寬度 */
+}
+
+.button:hover {
+    background-color: #f49ac0; /* 當懸停時顏色稍微加深 */
+    transform: scale(1.05);  /* 按鈕放大效果 */
+}
+
+/* 測驗選項的排列方式 */
+#questionContainer {
+    display: flex;
+    flex-direction: column;  /* 垂直排列選項 */
+    align-items: center;     /* 使選項水平居中 */
+    gap: 15px;               /* 選項間距 */
+}
+
+/* 輸入框樣式 */
+input[type="text"] {
+    padding: 12px 20px;
+    width: 80%;  /* 輸入框寬度設定為80% */
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+}
+
+/* 錯誤訊息 */
+#errorMessage {
+    color: red;
+    font-size: 14px;
+}
+
+/* 插圖樣式 */
+.illustration {
+    width: 80%;      /* 插圖寬度設定為容器的80% */
+    max-width: 300px; /* 最大寬度限制 */
+    margin: 20px 0;   /* 插圖上下間距 */
+    border-radius: 10px;  /* 插圖圓角 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* 插圖陰影效果 */
+    transition: transform 0.3s ease;  /* 插圖懸停動畫 */
+}
+
+.illustration:hover {
+    transform: scale(1.05);  /* 插圖放大效果 */
+}
+
+/* 漸顯動畫 */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

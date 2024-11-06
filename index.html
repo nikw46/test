@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>找尋「你的靈魂伴侶」？</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 初始頁面 -->
+    <div class="container" id="start">
+        <h1>找尋「你的靈魂伴侶」？</h1>
+       
+        <button class="button" onclick="startQuiz()">開始測驗</button>
+    </div>
+
+    <!-- 測驗題目頁面 -->
+    <div class="container" id="quiz" style="display: none;">
+        <h1>找尋「你的靈魂伴侶」？</h1>
+      
+        <div class="question-container" id="questionContainer">
+            <!-- JavaScript 會動態加載問題 -->
+        </div>
+    </div>
+
+    <!-- 輸入名字的告白環節 -->
+    <div class="container" id="inputName" style="display: none;">
+        <h2>請輸入妳的本名</h2>
+        <input type="text" id="userNameInput" placeholder="請輸入名字">
+        <button class="button" onclick="checkName()">確認</button>
+        <p id="nameError" style="color: red; display: none;">名字輸入錯誤，請重新輸入。</p>
+    </div>
+
+    <!-- 最終選擇頁面 -->
+    <div class="container" id="finalChoice" style="display: none;">
+        <h2>許芳綺妳願意跟我在一起嗎？</h2>
+        <img src="images/love_choice.png" alt="選擇" class="illustration"> <!-- 插圖 -->
+        <button class="button" onclick="goToResult('yes')">願意</button>
+        <button class="button" onclick="goToResult('think')">再想想</button>
+    </div>
+
+    <!-- 結果頁面：恭喜脫單 -->
+    <div class="container" id="congrats" style="display: none;">
+        <h2>恭喜許芳綺脫單了！</h2>
+        <img src="images/congratulations.png" alt="恭喜" class="illustration"> <!-- 插圖 -->
+    </div>
+
+    <!-- 結果頁面：再想想 -->
+    <div class="container" id="thinkAgain" style="display: none;">
+        <h2>你想得太久了！</h2>
+        <img src="images/think_too_long.png" alt="再想想" class="illustration"> <!-- 插圖 -->
+        <button class="button" onclick="goToResult('yes')">我願意</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
